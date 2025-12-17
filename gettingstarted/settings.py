@@ -1,3 +1,4 @@
+
 """
 Django settings for gettingstarted project.
 
@@ -13,11 +14,17 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 import secrets
 from pathlib import Path
-
 import dj_database_url
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+DEBUG = True
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'lab1-python-eiw8.onrender.com']
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS  = [BASE_DIR / "static"]
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
 
 
 # Before using your Heroku app in production, make sure to review Django's deployment checklist:
