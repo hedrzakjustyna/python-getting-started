@@ -20,8 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-if os.environ.get('RENDER_EXTERNAL_HOSTNAME'):
-    ALLOWED_HOSTS.append(os.environ['RENDER_EXTERNAL_HOSTNAME'])
+if render_host:
+    ALLOWED_HOSTS.append(render_host)
+
+ALLOWED_HOSTS.append('lab1-python-eiw8.onrender.com')
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS  = [BASE_DIR / "static"]
