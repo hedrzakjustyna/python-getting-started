@@ -11,6 +11,9 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
+from django.conf import settings
+settings.ALLOWED_HOSTS = ['*']
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "gettingstarted.settings")
 
 application = get_wsgi_application()
