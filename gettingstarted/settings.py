@@ -19,16 +19,10 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = True
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    'lab1-python-eiw8.onrender.com',
-    '*'
-]
-
-
+ALLOWED_HOSTS = ['*']
+    
 STATIC_URL = '/static/'
-STATICFILES_DIRS  = [BASE_DIR / "static"]
+STATICFILES_DIRS = [BASE_DIR / "static"]
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 
